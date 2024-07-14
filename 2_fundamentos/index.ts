@@ -14,3 +14,38 @@ console.log(y);
 
 console.log(y.toPrecision(3));
 
+// Strings
+const firstName: string = "Aryman";
+
+console.log(firstName.toUpperCase());
+
+let lastName: string = "Reis";
+
+const fullName = firstName +" "+ lastName;
+
+console.log(fullName);
+
+console.log(typeof fullName);
+
+// boolean
+let a: boolean = false;
+
+console.log(a);
+console.log(typeof a);
+
+a = true
+
+console.log(a);
+
+// inference e annotation
+const ann: string = "teste";
+
+let inf = "teste";
+
+//ann = 1;
+//inf = 1;//
+
+console.log("compilação automática");
+
+
+
