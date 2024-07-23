@@ -181,6 +181,20 @@ showDirection("left");
 const p = document.getElementById("some-p");
 console.log(p!.innerHTML);
 
+// bigint
+let n: bigint
+
+n = 1000n;
+
+console.log(n);
+
+// symbolA
+let symbolA:symbol = Symbol("a");
+let symbolB = Symbol("a");
+
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
+
 
 
 

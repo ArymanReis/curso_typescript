@@ -107,3 +107,12 @@ showDirection("left");
 //non null assertion operators
 const p = document.getElementById("some-p");
 console.log(p.innerHTML);
+// bigint
+let n;
+n = 1000n;
+console.log(n);
+// symbolA
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
