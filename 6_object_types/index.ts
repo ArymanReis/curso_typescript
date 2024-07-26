@@ -100,4 +100,66 @@ const goku: SuperHuman = {
 console.log(goku);
 console.log(goku.superpowers[1]);
 
+// intersection types
+interface Character {
+  name: string
+}
+
+interface Gun {
+  type: string
+  caliber: number
+}
+
+type HumanWithGun = Character & Gun;
+
+const arnold: HumanWithGun = {
+  name: "Aryman",
+  type: "Shotgun",
+  caliber: 12
+}
+
+console.log(arnold);
+
+console.log(arnold.caliber)
+
+// readonly array
+let myArray: ReadonlyArray<string> = ["Maça", "Laranja", "Banana"]
+
+//myArray[3] = "Mamão"
+
+console.log(myArray);
+
+myArray.forEach((item) => {
+  console.log("Fruta: "+ item)
+});
+
+myArray = myArray.map((item) => {
+  return `Fruta: ${item}`
+})
+
+console.log(myArray);
+
+type fiveNumbers = [number, number, number, number, number];
+
+const myNumberArray: fiveNumbers = [1, 2, 3, 4 ,5];
+
+console.log(myNumberArray);
+
+type nameAndAge = [string, number]
+
+const anotherUser:nameAndAge = ["Aryman", 30]
+
+console.log(anotherUser[0]);
+
+anotherUser[0] = "João"
+
+console.log(anotherUser[0]);
+
+// tuplas com readonly
+function showNumbers(numbers: readonly [number, number]) {
+  console.log(numbers[0]);
+  console.log(numbers[1])
+}
+
+showNumbers([1, 2]);
 
