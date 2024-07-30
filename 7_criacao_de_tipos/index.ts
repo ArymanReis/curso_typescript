@@ -98,4 +98,32 @@ const newCar = {
 
 showKm(newCar.km);
 
+// Condicional types
+interface A {}
+
+interface B extends A {}
+
+interface Teste {
+  showName(): string
+}
+
+type myType = B extends A ? number : string
+
+const someVar:myType = 5
+
+type myTypeB = Teste extends {showNumber(): number } ? string : boolean;
+
+//Template Literals Type
+type testA = "text"
+
+type CustomType = `some ${testA}`
+
+const testing: CustomType = "some text";
+
+type a1 = "Testando"
+type a2 = "Union"
+
+type a3 = `${a1}` | `${a2}`;
+
+
 
