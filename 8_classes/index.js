@@ -53,3 +53,56 @@ class Dwarf {
 const jimmy = new Dwarf("Jimmy");
 console.log(jimmy.name);
 jimmy.greeting();
+//this
+class Truck {
+    constructor(model, hp) {
+        this.model = model;
+        this.hp = hp;
+    }
+    showDetails() {
+        console.log(`Caminhão do modelo: ${this.model}, que tem ${this.hp} cavalos de potência`);
+    }
+}
+const volvo = new Truck("Volvo", 400);
+const scania = new Truck("Scania", 500);
+volvo.showDetails();
+scania.showDetails();
+// getters
+class Person {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    get fullName() {
+        return this.name + " " + this.surname;
+    }
+}
+const arymanReis = new Person("Aryman", "Reis");
+console.log(arymanReis.name);
+console.log(arymanReis.fullName);
+// setter
+class Coords {
+    set fillx(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log("X inserido com sucesso");
+    }
+    set filly(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log("Y inserido com sucesso");
+    }
+    get getCoords() {
+        return `X: ${this.x} e Y: ${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillx = 15;
+myCoords.filly = 0;
+myCoords.filly = 10;
+console.log(myCoords);
+console.log(myCoords.getCoords);
