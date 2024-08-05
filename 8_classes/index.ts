@@ -167,6 +167,63 @@ myCoords.filly = 10;
 
 console.log(myCoords);
 console.log(myCoords.getCoords);
+// implements
+interface showTitle {
+  itemTitle(): string
+}
 
+class blogPost implements showTitle {
 
+  title 
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle() {
+    return `O título do post é: ${this.title}`;
+  }
+}
+
+const myPost = new blogPost("Hello Word")
+
+console.log(myPost.itemTitle());
+
+class TestingInterface implements showTitle {
+  title
+
+  constructor(title: string) {
+    this.title = title
+  }
+
+  itemTitle() {
+    return `O título é: ${this.title}`
+  }
+}
+
+// override de métodos 
+class Base {
+  someMethod() {
+    console.log("alguma coisa");
+  }
+}
+
+class Nova extends Base {
+  someMethod() {
+    console.log("testanto outra coisa");
+  }
+}
+
+const myObject = new Nova()
+
+myObject.someMethod()
+
+// public
+class c {
+  public x = 10
+}
+
+const cInstance = new c()
+
+console.log(cInstance.x);
 
