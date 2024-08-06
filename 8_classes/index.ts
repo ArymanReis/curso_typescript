@@ -227,3 +227,64 @@ const cInstance = new c()
 
 console.log(cInstance.x);
 
+// protected
+class E {
+  protected x = 10;
+
+  protected protectedMethod() {
+    console.log("Este método é protegido");
+  }
+
+}
+
+class F extends E {
+
+  showX() {
+    console.log("X: " + this.x)
+  }
+
+  showProtectedMethod() {
+    this.protectedMethod()
+  }
+
+}
+
+const fInstance = new F()
+
+fInstance.showX();
+fInstance.showProtectedMethod();
+
+// private
+class PrivateClass {
+  private name = "Private";
+
+  showName() {
+    return this.name
+  }
+
+  private privateMethod() {
+    console.log("Método privado")
+  }
+
+  showPrivateMethod() {
+    this.privateMethod();
+  }
+}
+
+const pObj = new PrivateClass();
+
+console.log(pObj.showName());
+pObj.showPrivateMethod();
+
+// static members
+class StaticMembers {
+  static prop = "Teste static";
+
+  static staticMethod() {
+    console.log("Este é um método estático");
+  }
+}
+
+console.log(StaticMembers.prop);
+StaticMembers.staticMethod();
+
