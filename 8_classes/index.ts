@@ -288,3 +288,53 @@ class StaticMembers {
 console.log(StaticMembers.prop);
 StaticMembers.staticMethod();
 
+// generic class
+class item<T, U> {
+  first
+  second
+
+  constructor(first: T, second: U) {
+    this.first = first
+    this.second = second
+  }
+
+  get showFirst() {
+    return `O first é: ${this.first}`
+  }
+
+}
+
+const newItem = new item("caixa", "surpresa");
+
+console.log(newItem);
+
+console.log(newItem.showFirst);
+console.log(typeof newItem.first);
+
+const secondItem = new item(12, true);
+
+console.log(secondItem.showFirst)
+console.log(typeof secondItem.first);
+
+// parameter properties
+class parameterProperties {
+  constructor (public name: string, private qty: number, private price: number) {
+    this.name = name
+    this.qty = qty
+    this.price = price
+  }
+
+  get showQnt() {
+    return `Qtd total: ${this.qty}`
+  }
+  get showPrice() {
+    return `Qtd total: ${this.qty}`
+  }
+}
+
+const newShirt = new parameterProperties("Camisa", 5, 19.99);
+
+console.log(newShirt.name)
+//console.log(newShirt.price)
+console.log(newShirt.showPrice);
+console.log(newShirt.showQnt);
