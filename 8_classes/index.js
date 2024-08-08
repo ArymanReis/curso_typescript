@@ -231,3 +231,33 @@ console.log(newShirt.name);
 //console.log(newShirt.price)
 console.log(newShirt.showPrice);
 console.log(newShirt.showQnt);
+// class expressions
+const myClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+};
+const pessoa = new myClass("Jones");
+console.log(pessoa);
+console.log(pessoa.name);
+// abstract class
+class AbstractClass {
+}
+class AbstractExample extends AbstractClass {
+    constructor(name) {
+        super();
+        this.name = name;
+    }
+    showName() {
+        console.log(`O nome é: ${this.name}`);
+    }
+}
+const newAbstractObject = new AbstractExample("Aryman");
+newAbstractObject.showName();
+// relação entre classes
+class Dog {
+}
+class Cat {
+}
+const doguinho = new Cat();
+console.log(doguinho);
